@@ -1,56 +1,6 @@
 body {
 	margin: 0;
 	padding: 0;
-/*font-family: 'Comfortaa', cursive;
-font-family: 'Fredoka One', cursive;
-font-family: 'Gruppo', cursive;
-font-family: 'Amatica SC', cursive;
-font-family: 'Life Savers', cursive;
-font-family: 'Roboto Slab', serif;*/
-font-family: 'Open Sans', sans-serif;
-/*font-family: 'Open Sans Condensed', sans-serif;
-font-family: 'Suranna', serif;
-font-family: 'Rufina', serif;
-font-family: 'Judson', serif;
-font-family: 'Bentham', serif;*/
-/*font-family: 'Prata', serif;*/
+	font-family: 'Open Sans', sans-serif;
 }
 
-#app-container{
-	width: 100vw;
-	height: 100vh;
-}
-.welcome-container{
-width: 100vw;
-height: 100vh;
-}
-
-.welcome-page {
-	margin: 0;
-	padding: 0;
-	display: block;
-	text-align: center;
-	margin-top: 100px;
-}
-
-.welcomeh1{
-	margin: 0;
-	padding: 0;
-	font-family: 'Gruppo', sans-serif;
-	font-size: 40px;
-}
-.toh1 {
-	margin: 20px;
-	padding: 0;
-	font-family: 'Open Sans Condensed', sans-serif;
-	font-weight: lighter;
-	font-style: italic;
-	font-size: 20px;
-}
-
-.fattoasth1 {
-	margin: 0;
-	font-family: 'Bentham', serif;
-	font-size: 110px;
-	letter-spacing: 18px;
-}
