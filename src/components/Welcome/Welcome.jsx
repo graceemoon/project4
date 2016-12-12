@@ -1,5 +1,7 @@
 import React from 'react';
 import style from './Welcome.css';
+import Login from './Login/Login';
+import Signup from './Signup/Signup';
 
 const Welcome = () => (
 
@@ -11,6 +13,10 @@ const Welcome = () => (
         <h1 className="welcomeh1">WELCOME</h1>
         <h1 className="toh1">-   to   -</h1>
         <h1 className="fattoasth1">Fat Toast</h1>
+      </div>
+      <div className="buttons-row">
+        <Link to="/Login">LOG IN</Link>
+        <Link to="/Signup">SIGN UP</Link>
       </div>
     </div>
 
