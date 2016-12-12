@@ -1,7 +1,6 @@
 import React from 'react';
 import style from './Welcome.css';
-import Login from './Login/Login';
-import Signup from './Signup/Signup';
+import { Link } from 'react-router';
 
 const Welcome = () => (
 
@@ -14,13 +13,17 @@ const Welcome = () => (
         <h1 className="toh1">-   to   -</h1>
         <h1 className="fattoasth1">Fat Toast</h1>
       </div>
+
       <div className="buttons-row">
-        <Link to="/Login">LOG IN</Link>
-        <Link to="/Signup">SIGN UP</Link>
+        <button className="login-butt">
+          <Link className="a-login" to="/login">LOG IN</Link>
+        </button>
+        <button className="signup-butt">
+          <Link className="a-signup" to="/signup">SIGN UP</Link>
+        </button>
       </div>
+
     </div>
-
-
   </div>
 );
 

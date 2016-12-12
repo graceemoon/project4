@@ -7,6 +7,8 @@ import Welcome from './components/Welcome/Welcome.jsx';
 import Start from './components/Start/Start.jsx';
 import Login from './components/Login/Login.jsx';
 import Signup from './components/Signup/Signup.jsx';
+import NewPost from './components/NewPost/NewPost.jsx';
+import NewComment from './components/NewComment/NewComment.jsx';
 
 // mount our App at #container
 
@@ -22,6 +24,8 @@ ReactDOM.render((
 	<Route path="/start" component={Start}/>
 	<Route path="/login" component={Login}/>
 	<Route path="/signup" component={Signup}/>	
+	<Route path="/newpost" component={NewPost}/>
+	<Route path="/newcomment" component={NewComment}/>		
   </Router>
 ), document.querySelector('#root-container'))
 

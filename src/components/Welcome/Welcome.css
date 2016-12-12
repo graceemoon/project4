@@ -56,3 +56,65 @@ height: 100vh;
 	font-size: 110px;
 	letter-spacing: 18px;
 }
+
+.buttons-row {
+display: block;
+text-align: center;
+margin-top: 100px;
+}
+
+.login-butt {
+	border: 1px solid black;
+	border-radius: 100px;
+/*	padding: 10px 15px;*/
+	width: 150px;
+	padding: 15px 5px;
+	background-color: transparent;
+	margin: 0px;
+	margin-left: 80px;
+	margin-right: 80px;
+	text-align: center;
+}
+.signup-butt {
+	border: 1px solid black;
+	border-radius: 100px;
+	/*padding: 10px 15px;*/
+	width: 150px;
+	padding: 15px 5px;
+	background-color: transparent;
+	margin: 0px;
+	margin-left: 80px;
+	margin-right: 80px;
+	text-align: center;
+}
+
+.a-login{
+	padding: 0;
+	margin: 0;
+	text-decoration: none;
+	font-size: 18px; 
+	font-family: 'Gruppo', sans-serif;
+	letter-spacing: 2px;
+	color: #000000;
+	text-transform: lowercase;
+}
+.a-login:hover{
+	color: orange;
+}
+.a-signup{
+	padding: 0;
+	margin: 0;
+	text-decoration: none;
+	font-size: 18px; 
+	font-family: 'Gruppo', sans-serif;
+	font-weight: 300;
+	letter-spacing: 2px;
+	color: #000000;
+	text-transform: lowercase;
+}
+.a-signup:hover{
+	color: orange;
+}
+
+
+
