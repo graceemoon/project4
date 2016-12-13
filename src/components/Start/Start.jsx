@@ -1,3 +1,4 @@
+
 import React, { Component } from 'react';
 import { Link } from 'react-router';
 import style from './Start.css';
@@ -6,9 +7,9 @@ import Footer from './../Footer/Footer';
 import PostContainer from './../PostContainer/PostContainer';
 
 
-export default class Start extends Component {
+const Start = (props) => {
+console.log(props)
 
-	render() {
 
 		 return (
 		 	<div id="container">
@@ -19,11 +20,13 @@ export default class Start extends Component {
 				 	
 				 	<div>Start Page</div>
 				 	<Link className="newpost-butt" to="/newpost">New Post</Link>
-				 	<PostContainer />
+				 	<PostContainer 
+				 	posts={props.state.posts}/>
 
 				 	<Footer />
 				</div>
 		 	</div>
 		 );
-	 }
 };
+
+export default Start;
