@@ -6,9 +6,9 @@ import Footer from './../Footer/Footer';
 import PostContainer from './../PostContainer/PostContainer';
 
 
-export default class Start extends Component {
+const Start = (props) => {
 
-	render() {
+
 
 		 return (
 		 	<div id="container">
@@ -25,5 +25,4 @@ export default class Start extends Component {
 				</div>
 		 	</div>
 		 );
-	 }
 };

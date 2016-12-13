@@ -12,7 +12,7 @@ const bodyParser = require('body-parser');
 
 const methodOverride  = require('method-override');
 
-const indexRouter = require('./routes/index.js');
+const postRouter = require('./routes/post.js');
 
 
 app.use(logger('dev'));
@@ -26,7 +26,7 @@ app.use(methodOverride('_method'));
 
 
 
-app.use('/', indexRouter);
+app.use('/api', postRouter);
 
 app.listen(PORT, () => {
   console.log('woof! 🐶');

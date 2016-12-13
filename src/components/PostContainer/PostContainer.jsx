@@ -4,23 +4,26 @@ import style from './PostContainer.css';
 import Post from './../Post/Post';
 
 
-export default class PostContainer extends Component {
 
-	render() {
+ const PostContainer = (props) => {
 
-		 return (
-		 	<div id="container">
-		 	  <link href="https://fonts.googleapis.com/css?family=Amatica+SC:400,700|Bentham|Comfortaa:300,400,700|Fredoka+One|Gruppo|Judson:400,400i,700|Life+Savers:400,700|Open+Sans+Condensed:300,300i,700|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Prata|Roboto+Slab:100,300,400,700|Rufina:400,700|Suranna" rel="stylesheet" />
+  const mappedPosts = props.state.posts.map((post) => {
+    return (
+      <Post
+      	id={post.id}
+        user_id={post.user_id}
+        post_title={post.post_title}
+        post_content={post.post_content}
+      />
+    );
+  });
 
-		 	<div className="post-cont-cont">
-
-			 	
-			 	<div>PostContainer</div>
-			 	<Post />
-
-
-			</div>
-		 	</div>
-		 );
-	 }
+  return (
+    <div id="post-container">
+    	<link href="https://fonts.googleapis.com/css?family=Amatica+SC:400,700|Bentham|Comfortaa:300,400,700|Fredoka+One|Gruppo|Judson:400,400i,700|Life+Savers:400,700|Open+Sans+Condensed:300,300i,700|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Prata|Roboto+Slab:100,300,400,700|Rufina:400,700|Suranna" rel="stylesheet" />
+      {mappedPosts}
+    </div>
+  );
 };
+
+export default PostContainer;
