@@ -1,3 +1,4 @@
+
 import React, { Component } from 'react';
 import { Link } from 'react-router';
 import style from './Start.css';
@@ -7,7 +8,7 @@ import PostContainer from './../PostContainer/PostContainer';
 
 
 const Start = (props) => {
-
+console.log(props)
 
 
 		 return (
@@ -19,10 +20,13 @@ const Start = (props) => {
 				 	
 				 	<div>Start Page</div>
 				 	<Link className="newpost-butt" to="/newpost">New Post</Link>
-				 	<PostContainer />
+				 	<PostContainer 
+				 	posts={props.state.posts}/>
 
 				 	<Footer />
 				</div>
 		 	</div>
 		 );
 };
+
+export default Start;

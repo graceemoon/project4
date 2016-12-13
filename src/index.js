@@ -19,13 +19,13 @@ import NewComment from './components/NewComment/NewComment.jsx';
 
 ReactDOM.render((
   <Router history={hashHistory}>
-    <Route path="/" component={App} >
-		<IndexRoute component={Welcome}/> 
-		<Route path="/start" component={Start}/>
-		<Route path="/login" component={Login}/>
-		<Route path="/signup" component={Signup}/>	
-		<Route path="/newpost" component={NewPost}/>
-		<Route path="/newcomment" component={NewComment}/>
+    <Route path="/" components={App} >
+		<IndexRoute components={Welcome}/> 
+		<Route path="/start" components={Start}/>
+		<Route path="/login" components={Login}/>
+		<Route path="/signup" components={Signup}/>	
+		<Route path="/newpost" components={NewPost}/>
+		<Route path="/newcomment" components={NewComment}/>
 	</Route>		
   </Router>
 ), document.querySelector('#root-container'))

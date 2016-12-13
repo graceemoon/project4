@@ -10,8 +10,10 @@ import Welcome from './Welcome/Welcome';
 export default class App extends Component {
  constructor() {
     super();
+    this.getAllPosts = this.getAllPosts.bind(this)
     this.state = {
     	posts: [],
+    	comments: [],
     };
   }
 
@@ -20,14 +22,10 @@ componentDidMount() {
 }
 
 getAllPosts() {
-    fetch('/api', {
-      headers: {
-        'content-type': 'application/json',
-      },
-      method: 'GET',
-    })
+    fetch('/api')
     .then(r => r.json())
     .then((data) => {
+      console.log(data)
       this.setState({
         posts: data,
       });
