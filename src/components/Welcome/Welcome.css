@@ -1,19 +1,19 @@
 body {
 	margin: 0;
 	padding: 0;
-/*font-family: 'Comfortaa', cursive;
-font-family: 'Fredoka One', cursive;
-font-family: 'Gruppo', cursive;
-font-family: 'Amatica SC', cursive;
-font-family: 'Life Savers', cursive;
-font-family: 'Roboto Slab', serif;*/
-font-family: 'Open Sans', sans-serif;
-/*font-family: 'Open Sans Condensed', sans-serif;
-font-family: 'Suranna', serif;
-font-family: 'Rufina', serif;
-font-family: 'Judson', serif;
-font-family: 'Bentham', serif;*/
-/*font-family: 'Prata', serif;*/
+	/*font-family: 'Comfortaa', cursive;
+	font-family: 'Fredoka One', cursive;
+	font-family: 'Gruppo', cursive;
+	font-family: 'Amatica SC', cursive;
+	font-family: 'Life Savers', cursive;
+	font-family: 'Roboto Slab', serif;*/
+	font-family: 'Open Sans', sans-serif;
+	/*font-family: 'Open Sans Condensed', sans-serif;
+	font-family: 'Suranna', serif;
+	font-family: 'Rufina', serif;
+	font-family: 'Judson', serif;
+	font-family: 'Bentham', serif;*/
+	/*font-family: 'Prata', serif;*/
 }
 
 #welcome-container{
@@ -21,8 +21,8 @@ font-family: 'Bentham', serif;*/
 	height: 100vh;
 }
 .welcome-container{
-width: 100vw;
-height: 100vh;
+	width: 100vw;
+	height: 100vh;
 }
 
 .welcome-page {
@@ -39,6 +39,13 @@ height: 100vh;
 	font-family: 'Gruppo', sans-serif;
 	font-size: 45px;
 	letter-spacing: 5px;
+	animation: welcomedown 1s ease-in;
+}
+@keyframes welcomedown {
+0% 		{ opacity: 0; 
+		  margin: -50px;}
+100% 	{ opacity: 100%; 
+		  margin: 0;}
 }
 .toh1 {
 	margin: 20px;
@@ -48,6 +55,12 @@ height: 100vh;
 	font-style: italic;
 	font-size: 20px;
 	letter-spacing: 2px;
+	animation: todown 3s ease-in;
+}
+@keyframes todown {
+0% 		{ opacity: 0; }
+20%		{ opacity: 0; }
+100% 	{ opacity: 100%; }
 }
 
 .fattoasth1 {
@@ -55,12 +68,26 @@ height: 100vh;
 	font-family: 'Bentham', serif;
 	font-size: 110px;
 	letter-spacing: 18px;
+	animation: toastdown 4s ease-in-out;
+}
+@keyframes toastdown {
+0% 		{ opacity: 0; }
+50%		{ opacity: 0; 
+		  letter-spacing: -20px;}
+100% 	{ opacity: 100%; 
+		  letter-spacing: 18px;}
 }
 
 .buttons-row {
-display: block;
-text-align: center;
-margin-top: 100px;
+	display: block;
+	text-align: center;
+	margin-top: 100px;
+	animation: buttonopac 5s ease-in-out;
+}
+@keyframes buttonopac {
+0% 		{ opacity: 0; }
+70%		{ opacity: 0; }
+100% 	{ opacity: 100%; }
 }
 
 .login-butt {
