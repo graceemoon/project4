@@ -15,10 +15,10 @@ body{
 	height: 100%;
 	text-align: center;*/
 	margin: 0 auto;
-	padding: 20px 50px;
-	width: 70%;
+	padding: 10px 30px;
+	width: 50%;
 	text-align: center;
-	background-color: rgba(240,240,240,0.5);
+	background-color: rgba(255,255,255,0.5);
 	border: none;
 	border-radius: 10px;
 }
@@ -45,6 +45,34 @@ body{
 
 .contenth1 {
 	margin: 0;
-	padding: 0;
+	padding: 10px;
 	text-align: left;
 }
+
+.butt-cont {
+	display: block;
+	text-align: right;
+	margin: 0;
+	padding: 0;
+}
+
+.edit-butt {
+	border: 1px solid black;
+	border-radius: 3px;
+	padding: 5px;
+	letter-spacing: 2px;
+	margin: 10px 10px 0px 10px;
+	cursor: pointer;
+	background-color: 
+}
+
+.delete-butt {
+	border: 1px solid black;
+	border-radius: 3px;
+	padding: 5px;
+	letter-spacing: 2px;
+	margin: 10px 10px 0px 10px;
+	cursor: pointer;
+}
+
+

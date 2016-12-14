@@ -26,22 +26,22 @@ const db = require('../lib/db-connect.js');
 
   //PUT nnnahhhhh
 
-  // //DELETE 
-  // function deletePost(req, res, next) {
-  //   const pID = parseInt(req.params.id);
-  //   db.none('DELETE FROM posts WHERE id = $1', pID)
-  //   .then((deletePost) => {
-  //     next();
-  //   })
-  //   .catch(error => next(error));
-  // }
+  //DELETE 
+  function deletePost(req, res, next) {
+    const pID = parseInt(req.params.id);
+    db.none('DELETE FROM posts WHERE id = $1', pID)
+    .then((deletePost) => {
+      next();
+    })
+    .catch(error => next(error));
+  }
 
 
 
 module.exports = {
   getPosts,
   // addPost,
-  // deletePost,
+  deletePost,
 };
 
 
