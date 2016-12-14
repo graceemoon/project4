@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router';
 import style from './Start.css';
 import Header from './../Header/Header';
-import Footer from './../Footer/Footer';
+// import Footer from './../Footer/Footer';
 import PostContainer from './../PostContainer/PostContainer';
 
 
@@ -27,7 +27,6 @@ console.log(props)
 
 
 				</div>
-				<Footer />
 		 	</div>
 		 );
 };

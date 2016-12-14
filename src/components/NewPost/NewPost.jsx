@@ -16,7 +16,8 @@ export default class NewPost extends Component {
 			 	<h1 className="new-posth1">New Post</h1>
 				<form method="post">
 					  <input className="p-title" type="text" name="p-title" placeholder="post title" /><br/>
-					  <input className="p-content" type="text" name="p-content" placeholder="content" /><br/>
+					  <input className="p-img" type="text" name="p-img" placeholder="image link" /><br/>
+					  <textarea className="p-content" type="text" placeholder="content" /><br/>
 					  <input className="p-submit" type="submit" value="Submit"/>
 				</form>			 	
 				</div>
