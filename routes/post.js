@@ -10,15 +10,15 @@ postRouter.get('/', getPosts, (req, res) => {
   res.json(res.posts)
 })
 
-// //delete
-// router.delete('/:id', deletePost, (req, res) => {
-//   res.status(204).end()
-// });
+//delete
+postRouter.delete('/:id', deletePost, (req, res) => {
+  res.status(204).end()
+});
 
-// //post
-// router.post('/', newPost, (req, res) => {
-//   res.json(res.posts || []);
-// });
+//post
+postRouter.post('/', addPost, (req, res) => {
+  res.json(res.posts || []);
+});
 
 
 module.exports = postRouter;

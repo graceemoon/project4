@@ -6,18 +6,25 @@ import Post from './../Post/Post';
 
 
  const PostContainer = (props) => {
+  console.log(props)
 
-  const PostList = props.posts.map((post) => {
+  const PostList = props.posts.map((post, i) => {
     return (
       <Post
+        key={i}
         id={post.id}
         user_id={post.user_id}
         post_title={post.post_title}
         post_content={post.post_content}
-        post_img={post.post_img}  
+        post_img={post.post_img}
+        deletePost={props.deletePost}  
       />
     );
   });
+
+
+
+  
 
   return (
     <div id="post-container">

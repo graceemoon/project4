@@ -34,22 +34,17 @@ getAllPosts() {
   }
 
 
-deletePost(p) {
+deletePost(event) {
   // Implement abandoning a puppy here :(
-  let id = parseInt(p.target.id);
-  return fetch(`/api/${id}`, {
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    method: 'DELETE',
-  });
+  let id = event.target.getAttribute('id');
+  console.log('You can\'t delete food.. just get fat')
+  // fetch(`/api/${id}`,  { method: 'DELETE'})
+  // .then(this.getAllPosts())
+  // .catch(err => console.log('Bye Bye Sweets... or something like that', err))
 }
 
 newPost(n) {
-  return fetch('/api/posts', {
-    headers: {
-      'Content-Type': 'application/json'
-    },
+  return fetch('/api/newpost', {
     method: 'POST',
     body: JSON.stringify(n)
   });
@@ -65,6 +60,7 @@ render() {
 
      {this.props.children && React.cloneElement(this.props.children, {
               state: this.state,
+              deletePost: this.deletePost.bind(this)
             })}
 
 

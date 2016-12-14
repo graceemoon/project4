@@ -57,22 +57,46 @@ body{
 }
 
 .edit-butt {
-	border: 1px solid black;
+	border: 1px solid #777777;
 	border-radius: 3px;
 	padding: 5px;
 	letter-spacing: 2px;
 	margin: 10px 10px 0px 10px;
 	cursor: pointer;
-	background-color: 
+	background-color: transparent;
+	color: #777777;
+	transition: background-color 1s, color 1s;
+}
+.edit-butt:hover {
+	background-color: orange;
+	color: white;
+	animation: startbuthov .5s ease-in-out;
+	border: 1px solid orange;
+}
+@keyframes startbuthov {
+	0% {	background-color: transparent;
+	color: black;
+	border: 1px solid black;}
+	100%  {	background-color: orange;
+	color: white;
+	border: 1px solid orange;}
 }
 
 .delete-butt {
-	border: 1px solid black;
+	border: 1px solid #777777;
 	border-radius: 3px;
 	padding: 5px;
 	letter-spacing: 2px;
 	margin: 10px 10px 0px 10px;
 	cursor: pointer;
+	background-color: transparent;
+	color: #777777;
+	transition: background-color 1s, color 1s;
 }
-
+.delete-butt:hover {
+	background-color: orange;
+	color: white;
+	border: 1px solid orange;
+	animation: startbuthov .5s ease-in-out;
+}
 
