@@ -17,6 +17,10 @@ const Post = (props) =>  {
 				 	<h1 className="titleh1">{`${props.post_title}`}</h1>
 					<img className="imgh1" src={`${props.post_img}`} width="300"/>
 				 	<p className="contenth1">{`${props.post_content}`}</p>
+				 	<div className="butt-cont">
+					 	<button className="edit-butt">edit</button>
+					 	<button className="delete-butt">delete</button>
+					</div> 	
 					<br/>
 					</div>
 				</div>

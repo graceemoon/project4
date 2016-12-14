@@ -2,13 +2,15 @@ body{
 	margin: 0;
 	padding: 0;
 	font-family: 'Open Sans', sans-serif;
+
 }
 
 
-/*#container{
+#container{
 	width: 100vw;
 	height: 100vh;
-}*/
+	background-color: #FFF7D2;
+}
 
 .start-cont{
 	width: 100%;
@@ -26,7 +28,7 @@ body{
 
 .newpost-butt {
 	
-	border: 2px solid #aeaeae;
+	border: 1px solid #aeaeae;
 	border-radius: 10px;
 	background-color: transparent;
 	color: #777777;
@@ -35,35 +37,46 @@ body{
 	font-size: 12px;
 	margin: 10px;
 	padding: 10px;
+	transition: border-radius 1s, padding 1s;
 }
 .newpost-butt:hover {
 	border-radius: 100px;
 	border-color: orange;
 	background-color: orange;
-	border-radius: orange;
 	padding: 34px 10px;
-	animation: circle .5s ease-in;
 	text-transform: uppercase;
 	font-weight: bold;
 	color: #fafafa;
+	animation: circle .5s ease-in;
+
 }
 @keyframes circle {
 	0% { border-radius: 10px;
 		 padding: 10px 10px;
+		 text-transform: capitalize;
+		 font-weight: normal;
 		 background-color: transparent;
-	     border-radius: orange; }
-	40% { padding: 35px 10px; }
-	60% { padding: 25px 10px;
-		  color: #fafafa; }
+		 color: #777777;}
+
+	40% { padding: 35px 10px; 
+		  background-color: orange;
+		  color: #fafafa;
+		  text-transform: uppercase;
+		  font-weight: bold;}
+
+	60% { padding: 25px 10px; 
+			  background-color: orange;}
+
 	70% { padding: 35px 10px;
-		  color: #fafafa; }		  
-	80% { padding: 30px 10px; }	
+			  background-color: orange;}		
+
+	80% { padding: 30px 10px; 
+			  background-color: orange;}	
+
 	100% { border-radius: 100px;
 		   border-color: orange;
 		   padding: 34px 10px;
-		   background-color: orange;
-	       border-radius: orange; }
+		   background-color: orange;}
 }
-
 
 

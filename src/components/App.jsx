@@ -33,6 +33,30 @@ getAllPosts() {
     .catch(err => console.log(err));
   }
 
+
+deletePost(p) {
+  // Implement abandoning a puppy here :(
+  let id = parseInt(p.target.id);
+  return fetch(`/api/${id}`, {
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    method: 'DELETE',
+  });
+}
+
+newPost(n) {
+  return fetch('/api/posts', {
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    method: 'POST',
+    body: JSON.stringify(n)
+  });
+}
+
+
+
 render() {
 
  return (
