@@ -13,8 +13,10 @@ const Post = (props) =>  {
 
 		 	<div className="post-cont">
 		 	<h1>{`${props.post_title}`}</h1>
-			 	<div>Post Page</div>
-			 	<br/>
+			<img src={`${props.post_img}`} width="300"/>
+		 	<p>{`${props.post_content}`}</p>
+
+			<br/>
 
 			</div>
 		 	</div>

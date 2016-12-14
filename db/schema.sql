@@ -14,6 +14,7 @@ CREATE TABLE posts (
 	user_id INT REFERENCES users(id),
 	post_title VARCHAR,
 	post_content VARCHAR,
+	post_img TEXT,
 	created_on TIMESTAMP
 );
 

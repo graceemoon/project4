@@ -14,6 +14,7 @@ import Post from './../Post/Post';
         user_id={post.user_id}
         post_title={post.post_title}
         post_content={post.post_content}
+        post_img={post.post_img}  
       />
     );
   });
