@@ -67,13 +67,14 @@ body, html{
 	padding: 5px;
 	text-transform: uppercase;
 	letter-spacing: 1px;
+	transition: background-color 2s;
 }
 .p-submit:hover {
 	cursor: pointer;
-	background-color: rgba(240,240,240,1.0);
-	animation: sub 1.5s ease;
+	background-color: orange;
+	animation: sub 1.2s ease;
 }
 @keyframes sub {
 	0% { background-color: rgba(240,240,240, 0.0); }
-	100% { background-color: rgba(240,240,240,1.0); }
+	100% { background-color: orange; }
 }
