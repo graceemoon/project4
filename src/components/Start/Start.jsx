@@ -6,9 +6,12 @@ import Header from './../Header/Header';
 // import Footer from './../Footer/Footer';
 import PostContainer from './../PostContainer/PostContainer';
 
+export default class Start extends Component {
+	render(){
 
-const Start = (props) => {
-console.log(props)
+
+// const Start = (props) => {
+// console.log(props)
 
 
 		 return (
@@ -23,12 +26,15 @@ console.log(props)
 				 	</div>
 
 				 	<PostContainer 
-				 	posts={props.state.posts}/>
+				 	posts={this.props.state.posts}
+				 	deletePost={this.props.deletePost}
+				 	/>
 
 
 				</div>
 		 	</div>
 		 );
+		}
 };
 
-export default Start;
+// export default Start;

@@ -14,15 +14,27 @@ body {
 	font-family: 'Judson', serif;
 	font-family: 'Bentham', serif;*/
 	/*font-family: 'Prata', serif;*/
+
 }
 
 #welcome-container{
-	width: 100vw;
+/*	width: 100vw;
 	height: 100vh;
+*/
 }
-.welcome-container{
-	width: 100vw;
+
+.blah {
+/*	width: 100vw;
 	height: 100vh;
+	background-image: url('./milkpuff.jpg');
+	background-size: cover; */
+}
+
+
+.welcome-container{
+/*	width: 100vw;
+	height: 100vh;*/
+
 }
 
 .welcome-page {

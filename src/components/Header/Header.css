@@ -18,7 +18,16 @@ body {
 	display: block;
 	text-align: center;
 	background-color: rgba(0,0,0,0.1);
+/*    background: linear-gradient(270deg, #694b38, #fffbe9);
+    background-size: 400% 400%;
+	animation: gradanimate 50s ease-in-out infinite;*/
 }
+/*@keyframes gradanimate {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 51%}
+    100%{background-position:0% 50%}
+}*/
+
 
 /*make letter space smaller / or infinite animate*/
 .header-title{
@@ -27,4 +36,25 @@ body {
 	font-family: 'Bentham', sans-serif;
 	font-size: 16px;
 	letter-spacing: 8px;
+    text-shadow: 0px 0px 1px #FFFFFF;
+    animation: infin 30s ease-in-out infinite;
+    transition: letter-spacing 2s;
 }
+@keyframes infin {
+	0%{text-shadow: 0px 0px 4px #FFFFFF;
+		letter-spacing: 8px;}
+	30% {text-shadow: 2px 0px 4px #FFFFFF;
+		letter-spacing: 5px;}
+	80% {text-shadow: -2px 0px 4px #FFFFFF;
+		letter-spacing: 5px;}
+ 	100% {text-shadow: 0px 0px 4px #FFFFFF;
+ 		letter-spacing: 8px;}	
+/* 	0%{letter-spacing: 8px;
+ 	   text-shadow: 0px 0px 0px #FFFFFF;}
+ 	50%{letter-spacing: 5px;
+ 		text-shadow: 0px 0px 4px #FFFFFF;}
+  	100%{letter-spacing: 8px;
+  		 text-shadow: 0px 0px 0px #FFFFFF;}*/
+}
+
+
