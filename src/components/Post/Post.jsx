@@ -18,7 +18,7 @@ const Post = (props) =>  {
 				 	<p className="contenth1">{`${props.post_content}`}</p>
 				 	<div className="butt-cont">
 					 	<button className="edit-butt">edit</button>
-					 	<button className="delete-butt" onClick={event => props.deletePost(event)}>delete</button>
+					 	<button className="delete-butt" onClick={event => props.id.deletePost(event)}>delete</button>
 					</div> 	
 					<br/>
 					</div>

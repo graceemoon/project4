@@ -1,6 +1,7 @@
 import React    from 'react';
 import ReactDOM from 'react-dom';
 import { Router, Route, hashHistory, IndexRoute } from 'react-router';
+
 import App from './components/App.jsx';
 
 import Welcome from './components/Welcome/Welcome.jsx';
