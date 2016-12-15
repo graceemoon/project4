@@ -34,4 +34,5 @@ Sang / Alex / Donald / Andrew
 
 References:
 https://github.com/reactjs/react-router-tutorial/tree/master/lessons/04-nested-routes
+https://www.gradient-animator.com/
 puppies
