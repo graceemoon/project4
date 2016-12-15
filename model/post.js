@@ -15,7 +15,7 @@ const db = require('../lib/db-connect.js');
   // // GET one post from db
   // function getAPost(req, res, next) {
   //   var aPostID = parseInt(req.params.id);
-  //   db.one('SELECT * FROM posts WHERE id = $1;', aPostID)
+  //   db.one('SELECT * FROM posts WHERE id = $1;', req.params.id)
   //   .then((posts) => {
   //     res.posts = posts;
   //     console.log(res.posts)
@@ -29,7 +29,7 @@ const db = require('../lib/db-connect.js');
 
   // creating a new post with POST hahaha
   function addPost(req, res, next) {
-    db.one(
+    db.none(
       `INSERT INTO posts (post_title, post_img, post_content)
       VALUES($/post_title/, $/post_img/, $/post_content/);`, req.body)
     .then((post) => {
@@ -39,7 +39,7 @@ const db = require('../lib/db-connect.js');
     .catch(error => next(error));
   }
 
-  //PUT nnnahhhhh
+  //PUT 
 
   //DELETE 
   function deletePost(req, res, next) {

@@ -38,17 +38,33 @@ deletePost(event) {
   // Implement abandoning a puppy here :(
   let id = event.target.getAttribute('id');
   console.log('You can\'t delete food.. just get fat')
-  // fetch(`/api/${id}`,  { method: 'DELETE'})
-  // .then(this.getAllPosts())
-  // .catch(err => console.log('Bye Bye Sweets... or something like that', err))
+  fetch(`/api/posts/${id}`,  { 
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    method: 'DELETE'})
+  .then(this.getAllPosts())
+  .catch(err => console.log('Bye Bye Sweets... or something like that', err))
 }
 
-newPost(n) {
+
+addPost(infoToAdd) {
+  console.log('addpost', infoToAdd);
   return fetch('/api/newpost', {
+    headers: {
+      'Content-Type': 'application/json'
+    },
     method: 'POST',
-    body: JSON.stringify(n)
+    body: JSON.stringify(infoToAdd)
   });
 }
+
+handleAddPostSubmit(e) {
+  e.preventDefault();
+  console.log('this is handling add post submit')
+  this.addPost();
+}
+
 
 
 
@@ -60,7 +76,9 @@ render() {
 
      {this.props.children && React.cloneElement(this.props.children, {
               state: this.state,
-              deletePost: this.deletePost.bind(this)
+              deletePost: this.deletePost.bind(this),
+              addPost: this.addPost.bind(this),
+              handleAddPostSubmit: this.handleAddPostSubmit.bind(this)
             })}
 
 
