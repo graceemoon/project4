@@ -14,8 +14,12 @@ export default class App extends Component {
     this.state = {
     	posts: [],
     	comments: [],
+      addNewPostTitle: '',
+      addNewPostImg: '',
+      addNewPostContent: '',
     };
   }
+
 
 componentDidMount() {
 	this.getAllPosts();
@@ -36,37 +40,64 @@ getAllPosts() {
 
 deletePost(event) {
   // Implement abandoning a puppy here :(
-  let id = event.target.getAttribute('id');
-  console.log('You can\'t delete food.. just get fat')
-  fetch(`/api/posts/${id}`,  { 
+  let deleteID = event.target.getAttribute('id');
+  // console.log('You can\'t delete food.. just get fat')
+  fetch(`/api/${id}`,  { 
     headers: {
       'Content-Type': 'application/json'
     },
-    method: 'DELETE'})
+    method: 'DELETE', 
+  })
   .then(this.getAllPosts())
-  .catch(err => console.log('Bye Bye Sweets... or something like that', err))
+  .catch(err => console.log('Bye Bye Sweets', err))
 }
 
 
-addPost(infoToAdd) {
-  console.log('addpost', infoToAdd);
-  return fetch('/api/newpost', {
+//addPost(infoToAdd) {
+//   console.log('addpost', infoToAdd);
+//   return fetch('/api/newpost', {
+//     headers: {
+//       'Content-Type': 'application/json'
+//     },
+//     method: 'POST',
+//     body: JSON.stringify(infoToAdd)
+//   });
+// }
+ 
+handleAddPostSubmit(e) {
+  e.preventDefault();
+  // console.log('this is handling add post submit', this.state)
+  // this.addPost();
+  const newPostInfo = {
+    post_title: this.state.addNewPostTitle,
+    post_img: this.state.addNewPostImg,
+    post_content: this.state.addNewPostContent,
+  };
+
+  // this.addPost(newPostInfo);
+    fetch('/api/newpost', {
     headers: {
       'Content-Type': 'application/json'
     },
     method: 'POST',
-    body: JSON.stringify(infoToAdd)
+    body: JSON.stringify(newPostInfo)
   });
 }
 
-handleAddPostSubmit(e) {
-  e.preventDefault();
-  console.log('this is handling add post submit')
-  this.addPost();
+handleChangeTitle(e) {
+  // console.log(e.target.value);
+  this.setState({addNewPostTitle: e.target.value});
 }
 
+handleChangeImg(e) {
+  // console.log(e.target.value);
+  this.setState({addNewPostImg: e.target.value});
+}
 
-
+handleChangeContent(e) {
+  // console.log(e.target.value);
+  this.setState({addNewPostContent: e.target.value});
+}
 
 render() {
 
@@ -77,8 +108,11 @@ render() {
      {this.props.children && React.cloneElement(this.props.children, {
               state: this.state,
               deletePost: this.deletePost.bind(this),
-              addPost: this.addPost.bind(this),
-              handleAddPostSubmit: this.handleAddPostSubmit.bind(this)
+
+              handleAddPostSubmit: this.handleAddPostSubmit.bind(this),
+              handleChangeTitle: this.handleChangeTitle.bind(this),
+              handleChangeImg: this.handleChangeImg.bind(this),
+              handleChangeContent: this.handleChangeContent.bind(this),
             })}
 
 

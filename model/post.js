@@ -29,11 +29,14 @@ const db = require('../lib/db-connect.js');
 
   // creating a new post with POST hahaha
   function addPost(req, res, next) {
+    console.log('**** inside model', req.body)
     db.none(
       `INSERT INTO posts (post_title, post_img, post_content)
       VALUES($/post_title/, $/post_img/, $/post_content/);`, req.body)
+    // db.none(`INSERT INTO posts (post_title, post_img, post_content
+    //          VALUES($1, $2, $3)`, [req.body.post_title, req.body.post_img, req.body.post_content])
     .then((post) => {
-      res.posts = post;
+      // res.posts = post;
       next();
     })
     .catch(error => next(error));
@@ -45,11 +48,13 @@ const db = require('../lib/db-connect.js');
   function deletePost(req, res, next) {
     const pID = parseInt(req.params.id);
     db.none('DELETE FROM posts WHERE id = $1', pID)
-    .then((deletePost) => {
+    .then((results) => {
       next();
     })
     .catch(error => next(error));
   }
+
+
 
 
 

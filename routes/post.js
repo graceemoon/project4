@@ -12,11 +12,12 @@ postRouter.get('/', getPosts, (req, res) => {
 
 //delete
 postRouter.delete('/:id', deletePost, (req, res) => {
+	console.log('delete route')
   res.status(204).end()
 });
 
 //post
-postRouter.post('/', addPost, (req, res) => {
+postRouter.post('/newpost', addPost, (req, res) => {
   res.json(res.posts || []);
 });
 
