@@ -47,6 +47,7 @@ const db = require('../lib/db-connect.js');
   //DELETE 
   function deletePost(req, res, next) {
     const pID = parseInt(req.params.id);
+    console.log(pID)
     db.none('DELETE FROM posts WHERE id = $1', pID)
     .then((results) => {
       next();

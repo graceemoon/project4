@@ -17,6 +17,7 @@ export default class App extends Component {
       addNewPostTitle: '',
       addNewPostImg: '',
       addNewPostContent: '',
+      // deleteItem: '',
     };
   }
 
@@ -38,19 +39,22 @@ getAllPosts() {
   }
 
 
-deletePost(event) {
-  // Implement abandoning a puppy here :(
-  let deleteID = event.target.getAttribute('id');
-  // console.log('You can\'t delete food.. just get fat')
-  fetch(`/api/${id}`,  { 
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    method: 'DELETE', 
-  })
-  .then(this.getAllPosts())
-  .catch(err => console.log('Bye Bye Sweets', err))
-}
+// function deletePost(event) {
+//   let id = parseInt(event.target.id);
+//   console.log(id);
+//   return fetch(`/api/${id}`, {
+//     headers: {
+//       'Content-Type': 'application/json'
+//     },
+//     method: 'DELETE',
+//   });
+//   .then(this.getAllPosts())
+//   .catch(err => console.log('Bye Bye Sweets', err))
+// }
+
+
+
+
 
 
 //addPost(infoToAdd) {
@@ -107,7 +111,7 @@ render() {
 
      {this.props.children && React.cloneElement(this.props.children, {
               state: this.state,
-              deletePost: this.deletePost.bind(this),
+              // deletePost: this.deletePost.bind(this),
 
               handleAddPostSubmit: this.handleAddPostSubmit.bind(this),
               handleChangeTitle: this.handleChangeTitle.bind(this),
