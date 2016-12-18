@@ -32,9 +32,8 @@
     "morgan": "^1.7.0",
     "node-fetch": "^1.6.3",
     "path": "^0.12.7",
-    "pg-promise": "^5.2.7",
+    "pg-promise": "^5.2.7"
   },
-  
   "devDependencies": {
     "babel": "^6.5.2",
     "babel-core": "^6.11.4",
