@@ -56,7 +56,8 @@
     "heroku-prebuild": "bash ./scripts/deployment_react.sh",
     "heroku-postbuild": "bash ./scripts/deployment_cleanup.sh",
     "rebuild": "webpack -d --progress --colors",
-    "watch": "webpack -d --progress --watch"
+    "watch": "webpack -d --progress --watch",
+    "eject": "react-scripts eject"
   },
   "repository": {
     "type": "git",
