@@ -1,5 +1,5 @@
 {
-  "name": "fat toast",
+  "name": "fat-toast",
   "version": "1.0.0",
   "description": "React application template using webpack",
   "main": "server.js",
