@@ -1,14 +1,14 @@
 # project4
 ##F A T  T O A S T
-![](img/welcome.png)
+![](imgs/welcome.png)
 
-![](img/wireframe-login.png)
+![](imgs/wireframe-login.png)
 login / sign up page
 
-![](img/wireframe-main.png)
+![](imgs/wireframe-main.png)
 main page 
 
-![](img/wireframe-new.png)
+![](imgs/wireframe-new.png)
 make a new post
 
 #Tech:
@@ -34,4 +34,5 @@ Sang / Alex / Donald / Andrew
 
 References:
 https://github.com/reactjs/react-router-tutorial/tree/master/lessons/04-nested-routes
+https://www.gradient-animator.com/
 puppies
