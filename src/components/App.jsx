@@ -10,7 +10,7 @@ import Welcome from './Welcome/Welcome';
 export default class App extends Component {
  constructor() {
     super();
-    this.getAllPosts = this.getAllPosts.bind(this)
+    // this.getAllPosts = this.getAllPosts.bind(this)
     this.state = {
     	posts: [],
     	comments: [],
@@ -30,7 +30,7 @@ getAllPosts() {
     fetch('/api')
     .then(r => r.json())
     .then((data) => {
-      console.log(data)
+      // console.log(data)
       this.setState({
         posts: data,
       });
@@ -112,11 +112,10 @@ render() {
      {this.props.children && React.cloneElement(this.props.children, {
               state: this.state,
               // deletePost: this.deletePost.bind(this),
-
-              handleAddPostSubmit: this.handleAddPostSubmit.bind(this),
-              handleChangeTitle: this.handleChangeTitle.bind(this),
-              handleChangeImg: this.handleChangeImg.bind(this),
-              handleChangeContent: this.handleChangeContent.bind(this),
+              handleAddPostSubmit: (event => this.handleAddPostSubmit(event)),
+              handleChangeTitle: (event => this.handleChangeTitle(event)),
+              handleChangeImg: (event => this.handleChangeImg(event)),
+              handleChangeContent: (event => this.handleChangeContent(event)),
             })}
 
 

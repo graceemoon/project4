@@ -1,8 +1,6 @@
 /* eslint no-multi-spaces: ["error", { exceptions: { "VariableDeclarator": true } }] */
 
-const express      = require('express');
-// const { authenticate }   = require('../lib/auth');
-const postRouter  = express.Router();
+const postRouter = require('express').Router();
 const { getPosts, addPost, deletePost } = require('./../model/post.js');
 
 //get

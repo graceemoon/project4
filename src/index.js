@@ -29,5 +29,5 @@ ReactDOM.render((
 		<Route path="/newcomment" components={NewComment}/>
 	</Route>		
   </Router>
-), document.querySelector('#root-container'))
+), document.querySelector('#root-container'));
 
