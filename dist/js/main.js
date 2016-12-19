@@ -27200,20 +27200,20 @@
 	        return console.log(err);
 	      });
 	    }
-	
-	    // function deletePost(event) {
-	    //   let id = parseInt(event.target.id);
-	    //   console.log(id);
-	    //   return fetch(`/api/${id}`, {
-	    //     headers: {
-	    //       'Content-Type': 'application/json'
-	    //     },
-	    //     method: 'DELETE',
-	    //   });
-	    //   .then(this.getAllPosts())
-	    //   .catch(err => console.log('Bye Bye Sweets', err))
-	    // }
-	
+	  }, {
+	    key: 'deletePost',
+	    value: function deletePost(id) {
+	      // let id = parseInt(event.target.id);
+	      // console.log(id);
+	      fetch('/api/' + id, {
+	        headers: {
+	          'Content-Type': 'application/json'
+	        },
+	        method: 'DELETE'
+	      }).then(this.getAllPosts()).catch(function (err) {
+	        return console.log('Bye Bye Sweets', err);
+	      });
+	    }
 	
 	    //addPost(infoToAdd) {
 	    //   console.log('addpost', infoToAdd);
@@ -27276,7 +27276,9 @@
 	        _react2.default.createElement('link', { href: 'https://fonts.googleapis.com/css?family=Amatica+SC:400,700|Bentham|Comfortaa:300,400,700|Fredoka+One|Gruppo|Judson:400,400i,700|Life+Savers:400,700|Open+Sans+Condensed:300,300i,700|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Prata|Roboto+Slab:100,300,400,700|Rufina:400,700|Suranna', rel: 'stylesheet' }),
 	        this.props.children && _react2.default.cloneElement(this.props.children, {
 	          state: this.state,
-	          // deletePost: this.deletePost.bind(this),
+	          deletePost: function deletePost(event) {
+	            return _this3.deletePost(event);
+	          },
 	          handleAddPostSubmit: function handleAddPostSubmit(event) {
 	            return _this3.handleAddPostSubmit(event);
 	          },
@@ -27682,8 +27684,8 @@
 						),
 						_react2.default.createElement(
 							'button',
-							{ className: 'delete-butt', onClick: function onClick(event) {
-									return props.id.deletePost(event);
+							{ className: 'delete-butt', onClick: function onClick() {
+									return props.deletePost(props.id);
 								} },
 							'delete'
 						)

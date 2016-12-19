@@ -10,8 +10,8 @@ postRouter.get('/', getPosts, (req, res) => {
 
 //delete
 postRouter.delete('/:id', deletePost, (req, res) => {
-	console.log('delete route')
-  res.status(204).end()
+	// console.log('delete route')
+  res.json('deleted!');
 });
 
 //post

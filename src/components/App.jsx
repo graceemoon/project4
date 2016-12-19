@@ -39,18 +39,18 @@ getAllPosts() {
   }
 
 
-// function deletePost(event) {
-//   let id = parseInt(event.target.id);
-//   console.log(id);
-//   return fetch(`/api/${id}`, {
-//     headers: {
-//       'Content-Type': 'application/json'
-//     },
-//     method: 'DELETE',
-//   });
-//   .then(this.getAllPosts())
-//   .catch(err => console.log('Bye Bye Sweets', err))
-// }
+deletePost(id) {
+  // let id = parseInt(event.target.id);
+  // console.log(id);
+  fetch(`/api/${id}`, {
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    method: 'DELETE',
+  })
+  .then(this.getAllPosts())
+  .catch(err => console.log('Bye Bye Sweets', err))
+}
 
 
 
@@ -111,7 +111,7 @@ render() {
 
      {this.props.children && React.cloneElement(this.props.children, {
               state: this.state,
-              // deletePost: this.deletePost.bind(this),
+              deletePost: (event => this.deletePost(event)),
               handleAddPostSubmit: (event => this.handleAddPostSubmit(event)),
               handleChangeTitle: (event => this.handleChangeTitle(event)),
               handleChangeImg: (event => this.handleChangeImg(event)),
